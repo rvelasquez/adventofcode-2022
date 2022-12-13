@@ -1,8 +1,8 @@
-import calorie_counting_part1
+from calorie_counting_part1 import *
 
 
 def find_top_3_elves_with_most_calories():
-    elf_calories = sorted(part1.get_calorie_group_list(), reverse=True)
+    elf_calories = sorted(get_calorie_group_list(), reverse=True)
     print(sum(elf_calories[0:3]))
 
 
