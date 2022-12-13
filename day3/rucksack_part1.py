@@ -1,3 +1,5 @@
+# pylint: disable=missing-docstring
+
 def find_common_items(rucksack1, rucksack2):
     rucksack1_item_types = set(list(rucksack1))
     rucksack2_item_types = set(list(rucksack2))

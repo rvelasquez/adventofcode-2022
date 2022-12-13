@@ -1,4 +1,6 @@
-from calorie_counting_part1 import *
+# pylint: disable=missing-docstring
+
+from calorie_counting_part1 import get_calorie_group_list
 
 
 def find_top_3_elves_with_most_calories():
