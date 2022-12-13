@@ -58,7 +58,7 @@ def map_game_strategy_line(game_strategy_line):
 
 
 def get_strategy_list():
-    game_strategy_list = list(map(map_game_strategy_line, open("input").read().splitlines()))
+    game_strategy_list = list(map(map_game_strategy_line, open("input", encoding="utf-8").read().splitlines()))
     return game_strategy_list
 
 

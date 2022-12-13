@@ -22,7 +22,7 @@ def get_value(item):
 
 
 def total_priorities():
-    rucksacks = open("input").read().splitlines()
+    rucksacks = open("input", encoding="utf-8").read().splitlines()
     rucksack_groups = np.array_split(rucksacks, len(rucksacks) / 3)
     badges = []
     for rucksack_group in rucksack_groups:

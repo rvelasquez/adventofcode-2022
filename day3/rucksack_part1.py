@@ -18,7 +18,7 @@ def get_value(common_item):
 
 
 def total_priorities():
-    rucksacks = open("input").read().splitlines()
+    rucksacks = open("input", encoding="utf-8").read().splitlines()
     common_items_collection = []
     for rucksack in rucksacks:
         compartment1 = rucksack[:len(rucksack) // 2]
