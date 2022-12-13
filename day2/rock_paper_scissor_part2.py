@@ -25,6 +25,12 @@ player2_object_map = {
     'Z': PlayerChoice.SCISSOR
 }
 
+desired_result_map = {
+    'X': GameResult.LOSE,
+    'Y': GameResult.DRAW,
+    'Z': GameResult.WIN
+}
+
 
 def game_result(player_choices):
     match player_choices:
@@ -48,10 +54,16 @@ def game_result(player_choices):
             return GameResult.WIN
 
 
+def desired_player_choice(opponents_choice, desired_result):
+    for player_choice in PlayerChoice:
+        if desired_result == game_result((opponents_choice, player_choice)):
+            return player_choice
+
+
 def map_game_strategy_line(game_strategy_line):
     game_strategy = game_strategy_line.split()
     player1_choice = player1_object_map[game_strategy[0]]
-    player2_choice = player2_object_map[game_strategy[1]]
+    player2_choice = desired_player_choice(player1_choice, desired_result_map[game_strategy[1]])
     return player1_choice, player2_choice
 
 
