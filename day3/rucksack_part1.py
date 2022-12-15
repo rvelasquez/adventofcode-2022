@@ -1,4 +1,7 @@
 # pylint: disable=missing-docstring
+import os
+file_path = os.path.dirname(os.path.realpath(__file__)) + "/input"
+
 
 def find_common_items(rucksack1, rucksack2):
     rucksack1_item_types = set(list(rucksack1))
@@ -18,7 +21,7 @@ def get_value(common_item):
 
 
 def total_priorities():
-    rucksacks = open("input", encoding="utf-8").read().splitlines()
+    rucksacks = open(file_path, encoding="utf-8").read().splitlines()
     common_items_collection = []
     for rucksack in rucksacks:
         compartment1 = rucksack[:len(rucksack) // 2]

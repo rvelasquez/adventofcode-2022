@@ -1,4 +1,7 @@
 # pylint: disable=missing-docstring
+import os
+file_path = os.path.dirname(os.path.realpath(__file__)) + "/input"
+
 
 def find_elf_with_most_calories():
     elf_calories = get_calorie_group_list()
@@ -6,7 +9,7 @@ def find_elf_with_most_calories():
 
 
 def get_calorie_group_list():
-    lines = open("input", encoding="utf-8").read().split("\n\n")
+    lines = open(file_path, encoding="utf-8").read().split("\n\n")
     elf_calories = list(map(calculate_calories, lines))
     return elf_calories
 

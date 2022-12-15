@@ -1,6 +1,7 @@
 # pylint: disable=missing-docstring
-
 from enum import Enum
+import os
+file_path = os.path.dirname(os.path.realpath(__file__)) + "/input"
 
 
 class PlayerChoice(Enum):
@@ -70,7 +71,7 @@ def map_game_strategy_line(game_strategy_line):
 
 
 def get_strategy_list():
-    game_strategy_list = list(map(map_game_strategy_line, open("input", encoding="utf-8").read().splitlines()))
+    game_strategy_list = list(map(map_game_strategy_line, open(file_path, encoding="utf-8").read().splitlines()))
     return game_strategy_list
 
 

@@ -1,5 +1,8 @@
 # pylint: disable=missing-docstring
+import sys
+import os
 
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from calorie_counting_part1 import get_calorie_group_list
 
 

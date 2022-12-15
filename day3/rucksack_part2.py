@@ -1,6 +1,7 @@
 # pylint: disable=missing-docstring
-
 import numpy as np
+import os
+file_path = os.path.dirname(os.path.realpath(__file__)) + "/input"
 
 
 def find_common_items(rucksack1, rucksack2, rucksack3):
@@ -22,7 +23,7 @@ def get_value(item):
 
 
 def total_priorities():
-    rucksacks = open("input", encoding="utf-8").read().splitlines()
+    rucksacks = open(file_path, encoding="utf-8").read().splitlines()
     rucksack_groups = np.array_split(rucksacks, len(rucksacks) / 3)
     badges = []
     for rucksack_group in rucksack_groups:
